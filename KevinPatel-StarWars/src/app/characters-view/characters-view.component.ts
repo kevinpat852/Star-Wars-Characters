@@ -1,3 +1,4 @@
+import { CharacterService } from './../character.service';
 import { Component, OnInit, AfterViewInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 
@@ -18,7 +19,7 @@ export class CharactersViewComponent implements OnInit, AfterViewInit {
   public R2D2Films = [];
   public luke: any;
 
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient, public charServ: CharacterService) { }
 
   ngOnInit() {
   }
@@ -29,6 +30,7 @@ export class CharactersViewComponent implements OnInit, AfterViewInit {
 
   // clicked on Luke
   clickedLuke(){
+    this.charServ.getLukeInfo();
   }
 
   // clicked on Vader
