@@ -6,16 +6,19 @@ const Characters = require('../../src/assets/characters.json');
 
 characters.use((req, res, next) => {
   res.setHeader('Access-Control-Allow-Origin', '*');
+
   res.setHeader(
     'Access-Control-Allow-Headers',
     'Origin, X-Requested-With, Content-Type, Accept'
   );
+
   res.setHeader(
     'Access-Control-Allow-Methods',
     'GET, POST, PUT, PATCH, DELETE, OPTIONS'
   );
   next();
 });
+
 characters.use(bodyParser);
 
 characters.get('/getCharacters', (req,res,next) => {
@@ -25,4 +28,5 @@ characters.get('/getCharacters', (req,res,next) => {
     input: responseArr
   });
 });
+
 module.exports = characters;

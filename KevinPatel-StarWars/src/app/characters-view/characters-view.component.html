@@ -6,8 +6,74 @@
     <img id='KenobiIcon' src='../../assets/KenobiSquare.png' (click)='clickedKenobi()'>
     <img id='R2D2Icon' src='../../assets/R2-D2Square.jpg' (click)='clickedR2D2()'>
   </div>
-  <div id='chacterTableDiv'>
+  <!-- <div id='chacterTableDiv'>
     <table id='characterTable'>
     </table>
-  </div>
+  </div> -->
+</div>
+
+<!-- <div *ngIf= charServ.lukeFilms>
+  {{charServ.lukeFilms[0].film}}
+</div>
+
+<div *ngIf= charServ.vaderFilms>
+  {{charServ.vaderFilms[0].film}}
+</div>
+
+<div *ngIf= charServ.kenobiFilms>
+  {{charServ.kenobiFilms[0].error}}
+</div>
+
+<div *ngIf= charServ.R2D2Films>
+  {{charServ.R2D2Films[0].film}}
+</div> -->
+<div id='lukeTableDiv' *ngIf='charServ.lukeFilms'>
+  <table id='lukeTable'>
+    <caption><strong>Luke Skywalker</strong></caption>
+    <tr>
+      <th>Movie</th>
+      <th>Director</th>
+      <th>Date</th>
+    </tr>
+    <tr *ngFor='let movie of charServ.lukeFilms;'>
+      <td>{{movie.film}}</td>
+      <td>{{movie.director}}</td>
+      <td>{{movie.release}}</td>
+    </tr>
+  </table>
+</div>
+<div id='vaderTableDiv' *ngIf='charServ.vaderFilms'>
+  <table id='vaderTable'>
+    <caption><strong>Darth Vader</strong></caption>
+    <tr>
+      <th>Movie</th>
+      <th>Director</th>
+      <th>Date</th>
+    </tr>
+    <tr *ngFor='let movie of charServ.vaderFilms;'>
+      <td>{{movie.film}}</td>
+      <td>{{movie.director}}</td>
+      <td>{{movie.release}}</td>
+    </tr>
+  </table>
+</div>
+
+<div id='r2d2TableDiv' *ngIf='charServ.R2D2Films'>
+  <table id='r2d2Table'>
+    <caption><strong>R2D2</strong></caption>
+    <tr>
+      <th>Movie</th>
+      <th>Director</th>
+      <th>Date</th>
+    </tr>
+    <tr *ngFor='let movie of charServ.R2D2Films;'>
+      <td>{{movie.film}}</td>
+      <td>{{movie.director}}</td>
+      <td>{{movie.release}}</td>
+    </tr>
+  </table>
+</div>
+
+<div *ngIf= charServ.kenobiFilms id='kenobiDiv' align='center'>
+  <strong style='font-size:24px;'>{{charServ.kenobiFilms[0].error}}</strong>
 </div>
