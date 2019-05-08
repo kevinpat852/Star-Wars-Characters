@@ -1,0 +1,32 @@
+#LukeIcon{
+  height: 250px;
+  width: 250px;
+  border-radius: 50%;
+}
+#LukeIcon:hover{
+  cursor: pointer;
+}
+#VaderIcon{
+  height: 250px;
+  width: 250px;
+  border-radius: 50%;
+}
+#VaderIcon:hover{
+  cursor: pointer;
+}
+#KenobiIcon{
+  height: 250px;
+  width: 250px;
+  border-radius: 50%;
+}
+#KenobiIcon:hover{
+  cursor: pointer;
+}
+#R2D2Icon{
+  height: 250px;
+  width: 250px;
+  border-radius: 50%;
+}
+#R2D2Icon:hover{
+  cursor: pointer;
+}
