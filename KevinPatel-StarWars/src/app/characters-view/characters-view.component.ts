@@ -30,7 +30,7 @@ export class CharactersViewComponent implements OnInit, AfterViewInit {
 
   // clicked on Luke
   clickedLuke(){
-    this.charServ.getLukeInfo();
+    this.charServ.getCharacters();
   }
 
   // clicked on Vader
