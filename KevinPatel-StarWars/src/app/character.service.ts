@@ -1,17 +1,22 @@
-import { Injectable } from '@angular/core';
+import { Injectable, OnInit, AfterViewInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 
 @Injectable({
   providedIn: 'root'
 })
-export class CharacterService {
+export class CharacterService implements OnInit, AfterViewInit {
 
-  public character: any;
+  public characters: any;
 
   constructor(private http: HttpClient) { }
 
-  getLuke() {}
-  getVader() {}
-  getKenobi() {}
-  getR2D2() {}
+  ngOnInit() {
+  }
+  ngAfterViewInit(){
+  }
+
+  getLukeInfo() {}
+  getVaderInfo() {}
+  getKenobiInfo() {}
+  getR2D2Info() {}
 }
