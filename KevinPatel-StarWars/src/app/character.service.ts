@@ -20,13 +20,13 @@ export class CharacterService implements OnInit, AfterViewInit {
   }
 
   getLukeInfo() {
-    this.getCharacters().subscribe((data) => {
+    this.getCharacters().subscribe((data: any) => {
       console.log(data.characters);
-      this.http.get(data.characters[0].url).subscribe((luke) => {
+      this.http.get(data.characters[0].url).subscribe((luke: any) => {
         console.log(luke);
         let filmArr = [];
         for (let i=0; i<luke.films.length; i++) {
-          this.http.get(luke.films[i]).subscribe((lukeMovie) => {
+          this.http.get(luke.films[i]).subscribe((lukeMovie: any) => {
             console.log(lukeMovie);
             filmArr.push({
               film: lukeMovie.title,
@@ -42,13 +42,13 @@ export class CharacterService implements OnInit, AfterViewInit {
   }
 
   getVaderInfo() {
-    this.getCharacters().subscribe((data) => {
+    this.getCharacters().subscribe((data: any) => {
       console.log(data.characters);
-      this.http.get(data.characters[1].url).subscribe((vader) => {
+      this.http.get(data.characters[1].url).subscribe((vader: any) => {
         console.log(vader);
         let filmArr = [];
         for (let i=0; i<vader.films.length; i++) {
-          this.http.get(vader.films[i]).subscribe((vaderMovie) => {
+          this.http.get(vader.films[i]).subscribe((vaderMovie: any) => {
             console.log(vaderMovie);
             filmArr.push({
               film: vaderMovie.title,
@@ -64,13 +64,13 @@ export class CharacterService implements OnInit, AfterViewInit {
   }
 
   getKenobiInfo() {
-    this.getCharacters().subscribe((data) => {
+    this.getCharacters().subscribe((data: any) => {
       console.log(data.characters);
-      this.http.get(data.characters[2].url).subscribe((kenobi) => {
+      this.http.get(data.characters[2].url).subscribe((kenobi: any) => {
         console.log(kenobi);
         let filmArr = [];
         for (let i=0; i<kenobi.films.length; i++) {
-          this.http.get(kenobi.films[i]).subscribe((kenobiMovie) => {
+          this.http.get(kenobi.films[i]).subscribe((kenobiMovie :any) => {
             console.log(kenobi);
             filmArr.push({
               film: kenobiMovie.title,
@@ -89,13 +89,13 @@ export class CharacterService implements OnInit, AfterViewInit {
   }
 
   getR2D2Info() {
-    this.getCharacters().subscribe((data) => {
+    this.getCharacters().subscribe((data: any) => {
       console.log(data.characters);
-      this.http.get(data.characters[3].url).subscribe((r2d2) => {
+      this.http.get(data.characters[3].url).subscribe((r2d2: any) => {
         console.log(r2d2);
         let filmArr = [];
         for (let i=0; i<r2d2.films.length; i++) {
-          this.http.get(r2d2.films[i]).subscribe((r2d2Movie) => {
+          this.http.get(r2d2.films[i]).subscribe((r2d2Movie: any) => {
             console.log(r2d2);
             filmArr.push({
               film: r2d2Movie.title,
